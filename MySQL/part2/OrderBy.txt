@@ -1,0 +1,48 @@
+1)  ASCENDING ORDER
+
+
+mysql> select * from emp1 order by Name;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      123 | abc    | 10000  |
+|      222 | adam   | 30000  |
+|      444 | james  | 40000  |
+|      333 | jessey | 50000  |
+|      111 | xyz    | 20000  |
+|      111 | xyz    | 10000  |
++----------+--------+--------+
+6 rows in set (0.00 sec)
+
+
+###########################################
+
+
+2)    DEscending ORDER
+
+
+mysql> select * from emp1 order by Name DESC;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      111 | xyz    | 20000  |
+|      111 | xyz    | 10000  |
+|      333 | jessey | 50000  |
+|      444 | james  | 40000  |
+|      222 | adam   | 30000  |
+|      123 | abc    | 10000  |
++----------+--------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select * from emp1 order by Name DESc;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      111 | xyz    | 20000  |
+|      111 | xyz    | 10000  |
+|      333 | jessey | 50000  |
+|      444 | james  | 40000  |
+|      222 | adam   | 30000  |
+|      123 | abc    | 10000  |
++----------+--------+--------+
+6 rows in set (0.00 sec)
