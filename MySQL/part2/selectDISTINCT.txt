@@ -1,0 +1,45 @@
+mysql> select * from emp1;
++----------+------+--------+
+| PersonId | Name | Salary |
++----------+------+--------+
+|      123 | abc  | 10000  |
+|      111 | xyz  | 20000  |
++----------+------+--------+
+2 rows in set (0.00 sec)
+
+mysql> select DISTINCT salary from emp1;
++--------+
+| salary |
++--------+
+| 10000  |
+| 20000  |
++--------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+
+#######################
+mysql> select DISTINCT salary from emp1;
++--------+
+| salary |
++--------+
+| 10000  |
+| 20000  |
++--------+
+2 rows in set (0.00 sec)
+
+mysql> select DISTINCT Name,Salary from emp1;
++------+--------+
+| Name | Salary |
++------+--------+
+| abc  | 10000  |
+| xyz  | 20000  |
++------+--------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+
+############################################
+#################################

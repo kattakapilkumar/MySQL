@@ -1,0 +1,41 @@
+Using DESCRIBE
+The SQL query to get the table structure is:
+
+DESCRIBE products;
+You can run this from the MySQL CLI; phpMyAdmin; or using a programming language like PHP and then using the functions to retrieve each row from the query.
+
+The resulting data from the MySQL CLI looks like this for the example table above:
+
++-------------+---------------------+------+-----+---------+----------------+
+| Field       | Type                | Null | Key | Default | Extra          |
++-------------+---------------------+------+-----+---------+----------------+
+| product_id  | int(10) unsigned    | NO   | PRI | NULL    | auto_increment |
+| url         | varchar(100)        | NO   | UNI | NULL    |                |
+| name        | varchar(50)         | NO   |     | NULL    |                |
+| description | varchar(255)        | NO   |     | NULL    |                |
+| price       | decimal(10,2)       | NO   |     | NULL    |                |
+| visible     | tinyint(1) unsigned | NO   | MUL | 1       |                |
++-------------+---------------------+------+-----+---------+----------------+
+
+
+###################################################
+mysql> describe kapil;
+ERROR 1146 (42S02): Table 'sakila.kapil' doesn't exist
+mysql> use kapil;
+Database changed
+mysql> describe kapil;
+ERROR 1146 (42S02): Table 'kapil.kapil' doesn't exist
+mysql>
+##############################
+
+
+mysql> describe emp1;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| PersonId | int(11)     | YES  |     | NULL    |       |
+| Name     | varchar(20) | YES  |     | NULL    |       |
+| Salary   | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+

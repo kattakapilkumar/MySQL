@@ -1,0 +1,4 @@
+mysql> drop database world;
+Query OK, 3 rows affected (0.91 sec)
+
+mysql>

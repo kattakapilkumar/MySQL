@@ -1,0 +1,13 @@
+mysql> create table emp1(PersonId int,Name varchar(20),Salary varchar(20));
+Query OK, 0 rows affected (0.37 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_kapil |
++-----------------+
+| emp1            |
+| kapil1          |
++-----------------+
+2 rows in set (0.00 sec)
+
+mysql>

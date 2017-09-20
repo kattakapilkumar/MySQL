@@ -1,0 +1,8 @@
+mysql> truncate table kapil1;
+Query OK, 0 rows affected (0.28 sec)
+
+mysql>
+
+
+
+Definition :  The TRUNCATE TABLE statement is used to delete the data inside a table, but not the table itself.

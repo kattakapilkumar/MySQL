@@ -1,0 +1,26 @@
+mysql> select * from emp1 where Salary = 50000;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      333 | jessey | 50000  |
++----------+--------+--------+
+1 row in set (0.00 sec)
+
+mysql>
+
+
+##########################################
+mysql> select * from emp1 where Salary = 250000;
+Empty set (0.00 sec)
+
+
+2)   selecting the VARCHAR values .....  
+
+mysql> select * from emp1 where Name = 'xyz';
++----------+------+--------+
+| PersonId | Name | Salary |
++----------+------+--------+
+|      111 | xyz  | 20000  |
+|      111 | xyz  | 10000  |
++----------+------+--------+
+2 rows in set (0.00 sec)

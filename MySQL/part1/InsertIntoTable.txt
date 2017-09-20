@@ -1,0 +1,11 @@
+mysql> insert into emp1(PersonId,Name,Salary) values ('123','abc','10000');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_kapil |
++-----------------+
+| emp1            |
+| kapil1          |
++-----------------+
+2 rows in set (0.00 sec)

@@ -1,0 +1,9 @@
+mysql> SELECT COUNT(DISTINCT Salary) FROM emp1;
++------------------------+
+| COUNT(DISTINCT Salary) |
++------------------------+
+|                      2 |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql>
