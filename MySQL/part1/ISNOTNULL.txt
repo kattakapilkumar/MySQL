@@ -1,0 +1,53 @@
+mysql> insert into emp1 (PersonId,Name,Salary) values ('999','','72000');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from emp1;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      123 | abc    | 10000  |
+|      111 | xyz    | 20000  |
+|      111 | xyz    | 10000  |
+|      333 | jessey | 50000  |
+|      444 | james  | 40000  |
+|      222 | adam   | 30000  |
+|      987 |        | 250000 |
+|      999 |        | 72000  |
++----------+--------+--------+
+8 rows in set (0.00 sec)
+
+mysql> select * from emp1 where Name IS NOT NULL;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      123 | abc    | 10000  |
+|      111 | xyz    | 20000  |
+|      111 | xyz    | 10000  |
+|      333 | jessey | 50000  |
+|      444 | james  | 40000  |
+|      222 | adam   | 30000  |
+|      987 |        | 250000 |
+|      999 |        | 72000  |
++----------+--------+--------+
+8 rows in set (0.00 sec)
+
+mysql> select * from emp1 where Name IS  NULL;
+Empty set (0.00 sec)
+
+
+
+########################### EXAMPLE #####################
+mysql> select * from emp1 where Name IS NOT NULL;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      123 | abc    | 10000  |
+|      111 | xyz    | 20000  |
+|      111 | xyz    | 10000  |
+|      333 | jessey | 50000  |
+|      444 | james  | 40000  |
+|      222 | adam   | 30000  |
+|      987 |        | 250000 |
+|      999 |        | 72000  |
++----------+--------+--------+
+8 rows in set (0.00 sec)

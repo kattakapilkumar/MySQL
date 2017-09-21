@@ -1,0 +1,19 @@
+mysql> delete from emp1 where Name = 'abc';
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from emp1;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      111 | kapil  | 99999  |
+|      111 | kapil  | 99999  |
+|      333 | jessey | 99999  |
+|      444 | james  | 99999  |
+|      222 | adam   | 99999  |
+|      987 |        | 99999  |
+|      999 |        | 99999  |
+|      999 | NULL   | 99999  |
++----------+--------+--------+
+8 rows in set (0.00 sec)
+
+mysql>

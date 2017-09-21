@@ -1,0 +1,59 @@
+mysql> update emp1 set Salary = 55000 where Name =  jessey;
+ERROR 1054 (42S22): Unknown column 'jessey' in 'where clause'
+mysql> update emp1 set Salary = 55000 where PersonId =  333;
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update emp1 set Salary = 55500 where Name =  'jessey';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from emp1;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      123 | abc    | 10000  |
+|      111 | xyz    | 20000  |
+|      111 | xyz    | 10000  |
+|      333 | jessey | 55500  |
+|      444 | james  | 40000  |
+|      222 | adam   | 30000  |
+|      987 |        | 250000 |
+|      999 |        | 72000  |
+|      999 | NULL   | 72000  |
++----------+--------+--------+
+9 rows in set (0.00 sec)
+
+mysql>
+
+
+########### update mutliple rows..
+
+mysql> update emp1 set Name = 'kapil' where PersonalId = 111;
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    25
+Current database: kapil
+
+ERROR 1054 (42S22): Unknown column 'PersonalId' in 'where clause'
+mysql> update emp1 set Name = 'kapil' where PersonId = 111;
+Query OK, 2 rows affected (0.07 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from emp1;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      123 | abc    | 10000  |
+|      111 | kapil  | 20000  |
+|      111 | kapil  | 10000  |
+|      333 | jessey | 55500  |
+|      444 | james  | 40000  |
+|      222 | adam   | 30000  |
+|      987 |        | 250000 |
+|      999 |        | 72000  |
+|      999 | NULL   | 72000  |
++----------+--------+--------+
+9 rows in set (0.00 sec)
+
+mysql>

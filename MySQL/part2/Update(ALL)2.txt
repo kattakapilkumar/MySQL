@@ -1,0 +1,24 @@
+mysql> update Name set Salary = 99999;
+ERROR 1146 (42S02): Table 'kapil.name' doesn't exist
+mysql> update emp1 set Salary = 99999;
+Query OK, 9 rows affected (0.08 sec)
+Rows matched: 9  Changed: 9  Warnings: 0
+
+mysql> select * from emp1;
++----------+--------+--------+
+| PersonId | Name   | Salary |
++----------+--------+--------+
+|      123 | abc    | 99999  |
+|      111 | kapil  | 99999  |
+|      111 | kapil  | 99999  |
+|      333 | jessey | 99999  |
+|      444 | james  | 99999  |
+|      222 | adam   | 99999  |
+|      987 |        | 99999  |
+|      999 |        | 99999  |
+|      999 | NULL   | 99999  |
++----------+--------+--------+
+9 rows in set (0.00 sec)
+
+mysql> ^C
+mysql>
