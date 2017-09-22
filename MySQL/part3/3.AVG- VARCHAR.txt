@@ -1,0 +1,15 @@
+mysql> select AVG(Address) from emp3 where Mobileno > 900;
++--------------+
+| AVG(Address) |
++--------------+
+|            0 |
++--------------+
+1 row in set, 2 warnings (0.00 sec)
+
+mysql> select AVG(Address) from emp3;
++--------------+
+| AVG(Address) |
++--------------+
+|            0 |
++--------------+
+1 row in set, 3 warnings (0.00 sec)

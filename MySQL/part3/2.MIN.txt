@@ -1,0 +1,15 @@
+mysql> select MIN(Mobileno) from emp3 ;
++---------------+
+| MIN(Mobileno) |
++---------------+
+|           876 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select MIN(Address) from emp3 ;
++--------------+
+| MIN(Address) |
++--------------+
+| BGL          |
++--------------+
+1 row in set (0.00 sec)

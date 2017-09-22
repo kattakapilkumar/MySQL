@@ -1,0 +1,7 @@
+mysql> select MIN(Address) from emp3 where Mobileno > 666;
++--------------+
+| MIN(Address) |
++--------------+
+| BGL          |
++--------------+
+1 row in set (0.00 sec)

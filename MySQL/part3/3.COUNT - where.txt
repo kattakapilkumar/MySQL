@@ -1,0 +1,8 @@
+mysql> select count(Address) from emp3 where  Address = 'HYD';
++----------------+
+| count(Address) |
++----------------+
+|              1 |
++----------------+
+1 row in set (0.00 sec)
+

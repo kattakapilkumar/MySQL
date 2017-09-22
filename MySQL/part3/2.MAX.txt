@@ -1,0 +1,17 @@
+mysql> select MAX(Mobileno) from emp3 ;
++---------------+
+| MAX(Mobileno) |
++---------------+
+|           999 |
++---------------+
+1 row in set (0.01 sec)
+
+mysql> select MAX(Address) from emp3 ;
++--------------+
+| MAX(Address) |
++--------------+
+| HYD          |
++--------------+
+1 row in set (0.00 sec)
+
+mysql>

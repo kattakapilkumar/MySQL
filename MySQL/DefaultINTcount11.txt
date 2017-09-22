@@ -1,0 +1,16 @@
+mysql> create table emp3 (Address varchar(20),Mobileno int,Position varchar(20));
+Query OK, 0 rows affected (0.36 sec)
+
+mysql> dscribe emp1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dscribe emp1' at line 1
+mysql> dscribe emp3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dscribe emp3' at line 1
+mysql> describe emp3;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| Address  | varchar(20) | YES  |     | NULL    |       |
+| Mobileno | int(11)     | YES  |     | NULL    |       |
+| Position | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)

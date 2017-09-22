@@ -1,0 +1,9 @@
+mysql> select AVG(Mobileno) from emp3;
++---------------+
+| AVG(Mobileno) |
++---------------+
+|      957.6667 |
++---------------+
+1 row in set (0.04 sec)
+
+mysql>

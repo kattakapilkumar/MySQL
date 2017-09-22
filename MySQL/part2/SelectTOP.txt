@@ -1,0 +1,26 @@
+MySQL Syntax:
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+
+mysql> select * from emp3;
++---------+----------+----------+
+| Address | Mobileno | Position |
++---------+----------+----------+
+| HYD     |      998 | DEV      |
+| BGL     |      876 | QA       |
+| DEL     |      999 | QA       |
++---------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from emp3 limit 2;
++---------+----------+----------+
+| Address | Mobileno | Position |
++---------+----------+----------+
+| HYD     |      998 | DEV      |
+| BGL     |      876 | QA       |
++---------+----------+----------+
+2 rows in set (0.00 sec)
