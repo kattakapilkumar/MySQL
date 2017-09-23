@@ -1,0 +1,10 @@
+The following SQL statement creates an alias named "Address" that combine four columns (Address, PostalCode, City and Country):
+
+Example
+SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address
+FROM Customers;
+Try it Yourself »
+Note: To get the SQL statement above to work in MySQL use the following:
+
+SELECT CustomerName, CONCAT(Address,', ',PostalCode,', ',City,', ',Country) AS Address
+FROM Customers;

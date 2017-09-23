@@ -1,0 +1,12 @@
+Using the [charlist] Wildcard
+The following SQL statement selects all customers with a City starting with "b", "s", or "p":
+
+Example
+SELECT * FROM Customers
+WHERE City LIKE '[bsp]%';
+Try it Yourself »
+The following SQL statement selects all customers with a City starting with "a", "b", or "c":
+
+Example
+SELECT * FROM Customers
+WHERE City LIKE '[a-c]%';

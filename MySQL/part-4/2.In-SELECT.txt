@@ -1,0 +1,6 @@
+The following SQL statement selects all customers that are from the same countries as the suppliers:
+
+Example
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
+Try it Yourself »

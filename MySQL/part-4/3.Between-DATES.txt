@@ -1,0 +1,3 @@
+Example
+SELECT * FROM Orders
+WHERE OrderDate BETWEEN #07/04/1996# AND #07/09/1996#;

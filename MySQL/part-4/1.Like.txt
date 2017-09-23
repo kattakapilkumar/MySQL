@@ -1,0 +1,9 @@
+mysql> select * from emp3 where Address Like  'H%';
++---------+----------+----------+
+| Address | Mobileno | Position |
++---------+----------+----------+
+| HYD     |      998 | DEV      |
++---------+----------+----------+
+1 row in set (0.02 sec)
+
+mysql>
