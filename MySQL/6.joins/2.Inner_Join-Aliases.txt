@@ -1,0 +1,39 @@
+mysql> select c.ID ,c.NAME,o.AMOUNT,o.DATE from joins_customers AS c INNER JOIN join_orders AS o where c.ID = o.customer_ID;
++------+----------+--------+----------------------------+
+| ID   | NAME     | AMOUNT | DATE                       |
++------+----------+--------+----------------------------+
+|    3 | Kaushik  |   3000 | 2009-10-08 00:00:00.000000 |
+|    3 | Kaushik  |   1500 | 2009-10-08 00:00:00.000000 |
+|    2 | khilan   |   1560 | 2009-10-08 00:00:00.000000 |
+|    4 | Chaitali |   2060 | 2008-05-20 00:00:00.000000 |
++------+----------+--------+----------------------------+
+4 rows in set (0.00 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+
+
+
+
+mysql> select c.ID,c.NAME,c.AMOUNT,o.DATE from joins_customers AS c,join_orders AS o where c.ID = o.customer_ID;
+ERROR 1054 (42S22): Unknown column 'c.AMOUNT' in 'field list'
+mysql> select c.ID,c.NAME,o.AMOUNT,o.DATE from joins_customers AS c,join_orders AS o where c.ID = o.customer_ID;
++------+----------+--------+----------------------------+
+| ID   | NAME     | AMOUNT | DATE                       |
++------+----------+--------+----------------------------+
+|    3 | Kaushik  |   3000 | 2009-10-08 00:00:00.000000 |
+|    3 | Kaushik  |   1500 | 2009-10-08 00:00:00.000000 |
+|    2 | khilan   |   1560 | 2009-10-08 00:00:00.000000 |
+|    4 | Chaitali |   2060 | 2008-05-20 00:00:00.000000 |
++------+----------+--------+----------------------------+
+4 rows in set (0.00 sec)
+
+mysql>
