@@ -1,5 +1,8 @@
 mysql> select ID,NAME,AGE,AMOUNT from joins_customers,join_orders where joins_customeres.ID = join_orders.customer_ID;
 ERROR 1054 (42S22): Unknown column 'joins_customeres.ID' in 'where clause'
+
+
+
 mysql> select ID,NAME,AGE,AMOUNT from joins_customers,join_orders where joins_customers.ID = join_orders.customer_ID;
 +------+----------+------+--------+
 | ID   | NAME     | AGE  | AMOUNT |
