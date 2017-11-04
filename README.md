@@ -19,6 +19,8 @@ This Repo Contains MySQL queries to perform operations on tables
                 v)
                 vi)
          2)Getting Started with MySQL Stored Procedures
+                1)Writing the first MySQL stored procedure
+                2)Calling stored procedures
          3)MySQL Stored Procedure Variables
          4)MySQL Stored Procedure Parameters
          5)MySQL Stored Procedures That Return Multiple Values
