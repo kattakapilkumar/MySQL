@@ -1,0 +1,46 @@
+The IN parameter example
+
+The following example illustrates how to use the IN parameter in the GetOfficeByCountry stored procedure that selects offices located in a particular country.
+
+
+DELIMITER //
+CREATE PROCEDURE GetOfficeByCountry(IN countryName VARCHAR(255))
+	BEGIN
+		SELECT * 
+ 		FROM offices
+ 		WHERE country = countryName;
+	END //
+DELIMITER ;
+1
+2
+3
+4
+5
+6
+7
+8
+DELIMITER //
+CREATE PROCEDURE GetOfficeByCountry(IN countryName VARCHAR(255))
+ BEGIN
+ SELECT * 
+ FROM offices
+ WHERE country = countryName;
+ END //
+DELIMITER ;
+The countryName is the IN parameter of the stored procedure. Inside the stored procedure, we select all offices that locate in the country specified by the countryName parameter.
+
+Suppose, we want to get all offices in the USA, we just need to pass a value (USA) to the stored procedure as follows:
+
+
+CALL GetOfficeByCountry('USA');
+1
+CALL GetOfficeByCountry('USA');
+MySQL Stored Procedure Parameters
+
+To get all offices in France, we pass the France literal string to the GetOfficeByCountry  stored procedure as follows:
+
+
+CALL GetOfficeByCountry('France')
+1
+CALL GetOfficeByCountry('France')
+IN parameter offices in France
