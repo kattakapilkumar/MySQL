@@ -1,0 +1,270 @@
+MYSQL TUTORIAL
+HOME
+BASIC MYSQL
+ADVANCED MYSQL
+MySQL Stored Procedures
+MySQL Views
+MySQL Triggers
+MySQL Administration
+MySQL Full-Text Search
+MySQL Functions
+INTERFACES
+MySQL PHP
+MySQL Node.js
+MySQL JDBC
+MySQL Python
+MySQL Perl
+TIPS
+TRYIT
+Home / MySQL Stored Procedure / MySQL IF Statement
+MySQL IF Statement
+
+
+?
+Summary: in this tutorial, you will learn how to use MySQL IF statement to execute a block of SQL code based on conditions.
+
+The MySQL IF statement allows you to execute a set of SQL statements based on a certain condition or value of an expression. To form an expression in MySQL, you can combine literals, variables, operators, and even functions. An expression can return one of three values TRUE FALSE, or NULL.
+
+Note that there is an IF function that is different from the IF statement specified in this tutorial.
+
+MySQL IF statement syntax
+
+The following illustrates the syntax of the IF statement:
+
+
+IF expression THEN 
+   statements;
+END IF;
+1
+2
+3
+IF expression THEN 
+   statements;
+END IF;
+If the expression evaluates to TRUE , then the statements will be executed, otherwise, the control is passed to the next statement following the END IF.
+
+The following flowchart demonstrates the IF statement:
+
+mysql if statement
+
+ 
+
+MySQL IF ELSE statement
+
+In case you want to execute statements when the expression evaluates to FALSE , you use the IF ELSE statement as follows:
+
+
+IF expression THEN
+   statements;
+ELSE
+   else-statements;
+END IF;
+1
+2
+3
+4
+5
+IF expression THEN
+   statements;
+ELSE
+   else-statements;
+END IF;
+The following flowchart illustrates the IF ELSE statement:
+
+mysql if else statement
+
+MySQL IF ELSEIF ELSE statement
+
+If you want to execute statements conditionally based on multiple expressions, you use the IF ELSEIF ELSE statement as follows:
+
+
+IF expression THEN
+   statements;
+ELSEIF elseif-expression THEN
+   elseif-statements;
+...
+ELSE
+   else-statements;
+END IF;
+1
+2
+3
+4
+5
+6
+7
+8
+IF expression THEN
+   statements;
+ELSEIF elseif-expression THEN
+   elseif-statements;
+...
+ELSE
+   else-statements;
+END IF;
+If the expression evaluates to TRUE , the statements in the IF branch executes. If the expression evaluates to FALSE , MySQL will check the elseif-expression and execute the elseif-statements in the ELSEIF branch if the elseif_expression evaluates to TRUE .
+
+The IF statement may have multiple ELSEIF branches to check multiple expressions. If no expression evaluates to TRUE, the else-statements in the ELSE branch will execute.
+
+mysql if elseif else statement
+
+MySQL IF statement examples
+
+The following example illustrates how to use the IF ESLEIF ELSE statement. The GetCustomerLevel()   stored procedure accepts two parameters customer number and customer level.
+
+First, it gets the credit limit from the customers table.
+
+Then, based on the credit limit, it determines the customer level: PLATINUM , GOLD , and SILVER .
+
+The parameter p_customerlevel stores the level of the customer and is used by the calling program.
+
+
+DELIMITER $$
+
+CREATE PROCEDURE GetCustomerLevel(
+    in  p_customerNumber int(11), 
+    out p_customerLevel  varchar(10))
+BEGIN
+    DECLARE creditlim double;
+
+    SELECT creditlimit INTO creditlim
+    FROM customers
+    WHERE customerNumber = p_customerNumber;
+
+    IF creditlim > 50000 THEN
+	SET p_customerLevel = 'PLATINUM';
+    ELSEIF (creditlim <= 50000 AND creditlim >= 10000) THEN
+        SET p_customerLevel = 'GOLD';
+    ELSEIF creditlim < 10000 THEN
+        SET p_customerLevel = 'SILVER';
+    END IF;
+
+END$$
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+DELIMITER $$
+ 
+CREATE PROCEDURE GetCustomerLevel(
+    in  p_customerNumber int(11), 
+    out p_customerLevel  varchar(10))
+BEGIN
+    DECLARE creditlim double;
+ 
+    SELECT creditlimit INTO creditlim
+    FROM customers
+    WHERE customerNumber = p_customerNumber;
+ 
+    IF creditlim > 50000 THEN
+ SET p_customerLevel = 'PLATINUM';
+    ELSEIF (creditlim <= 50000 AND creditlim >= 10000) THEN
+        SET p_customerLevel = 'GOLD';
+    ELSEIF creditlim < 10000 THEN
+        SET p_customerLevel = 'SILVER';
+    END IF;
+ 
+END$$
+The following flowchart demonstrates the logic of determining customer level.
+
+MySQL IF statement flow chart
+
+In this tutorial, you have learned how to use MySQL IF statement to execute a block of SQL code based on conditions.
+
+Related Tutorials
+
+MySQL Loop in Stored Procedures
+MySQL CASE Statement
+17Share
+Tweet
+0Share
+
+?
+Previous Tutorial:
+MySQL Stored Procedures That Return Multiple Values
+Next Tutorial:
+MySQL CASE Statement
+
+?
+MYSQL QUICK START
+
+What Is MySQL?
+Install MySQL Database Server
+Download MySQL Sample Database
+Load Sample Database
+
+MYSQL STORED PROCEDURES
+
+MySQL Stored Procedures Introduction
+MySQL Stored Procedures Getting Started
+MySQL Stored Procedure Variables
+MySQL Stored Procedure Parameters
+MySQL Stored Procedures – Return Multiple Values
+MySQL IF Statement
+MySQL CASE Statement
+IF vs. CASE
+MySQL Loop Statements
+MySQL Cursor
+MySQL Stored Procedures Listing
+MySQL Error Handling
+MySQL Stored Procedures – Raising Error Conditions
+MySQL Stored Function
+
+
+MYSQL PROGRAMMING INTERFACES
+
+PHP MySQL Tutorial
+Node.js MySQL Tutorial
+Python MySQL Tutorial
+Perl MySQL Tutorial
+MySQL JDBC Tutorial
+OTHER TUTORIALS
+
+MySQL Administration
+MySQL Full-Text Search
+MySQL Cheat Sheet
+MySQL Books and Video Training
+MySQL Hosting
+MySQL Resources
+RECENT MYSQL TUTORIALS
+
+MySQL UUID Smackdown: UUID vs. INT for Primary Key
+MySQL RIGHT JOIN
+MySQL MINUS
+MySQL Join Made Easy
+How To Delete Duplicate Rows in MySQL
+How To Find Duplicate Values in MySQL
+MySQL LAST_DAY Function
+MySQL EXTRACT Function
+MySQL SYSDATE Function
+MySQL CURDATE Function
+ABOUT MYSQL TUTORIAL WEBSITE
+
+MySQLTutorial.org is a website dedicated to MySQL database. We regularly publish useful MySQL tutorials to help web developers and database administrators learn MySQL faster and more effectively.
+
+All MySQL tutorials are practical and easy-to-follow, with SQL script and screenshots available. More About Us
+
+SITE LINKS
+
+About Us
+Contact Us
+Request a Tutorial
+Privacy Policy
+Copyright © 2017 by www.mysqltutorial.org. All Rights Reserved.
