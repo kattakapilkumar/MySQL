@@ -16,11 +16,15 @@ This Repo Contains MySQL queries to perform operations on tables
                 ii)Defination of stored procedures
                 iii)recursive stored procudures.
                 iV)Stored Procedures in MySQL.
-                v)
-                vi)
+                v)MySQL stored procedures advantages
+                vi)MySQL stored procedures disadvantages
          2)Getting Started with MySQL Stored Procedures
                 1)Writing the first MySQL stored procedure
                 2)Calling stored procedures
-         3)MySQL Stored Procedure Variables
-         4)MySQL Stored Procedure Parameters
-         5)MySQL Stored Procedures That Return Multiple Values
+         3) MySQL Stored Procedure Variables
+         4) MySQL Stored Procedure Parameters
+         5) MySQL Stored Procedures That Return Multiple Values
+         6) MySQL IF Statement
+         7) MySQL CASE Statement
+         8) Hints for Choosing Between IF and CASE Statements
+         9) MySQL Loop in Stored Procedures
