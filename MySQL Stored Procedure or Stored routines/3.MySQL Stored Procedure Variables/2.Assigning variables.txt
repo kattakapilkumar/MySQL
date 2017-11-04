@@ -1,0 +1,30 @@
+Once you declared a variable, you can start using it. To assign a variable another value, you use the SET  statement, for example:
+
+
+DECLARE total_count INT DEFAULT 0;
+SET total_count = 10;
+1
+2
+DECLARE total_count INT DEFAULT 0;
+SET total_count = 10;
+The value of the total_count variable is 10  after the assignment.
+
+Besides the SET  statement, you can use the SELECT INTO  statement to assign the result of a query, which returns a scalar value, to a variable. See the following example:
+
+
+DECLARE total_products INT DEFAULT 0
+
+SELECT COUNT(*) INTO total_products
+FROM products
+1
+2
+3
+4
+DECLARE total_products INT DEFAULT 0
+ 
+SELECT COUNT(*) INTO total_products
+FROM products
+In the example above:
+
+First, we declare a variable named total_products  and initialize its value to 0.
+Then, we used the SELECT INTO  statement to assign the total_products  variable the number of products that we selected from the products  table in the sample database.

@@ -1,0 +1,7 @@
+A variable has its own scope that defines its lifetime. If you declare a variable inside a stored procedure, it will be out of scope when the END statement of stored procedure reached.
+
+If you declare a variable inside BEGIN END  block, it will be out of scope if the END is reached. You can declare two or more variables with the same name in different scopes because a variable is only effective in its own scope. However, declaring variables with the same name in different scopes is not good programming practice.
+
+A variable that begins with the @ sign is session variable. It is available and accessible until the session ends.
+
+In this tutorial, we have shown you how to declare a variable inside stored procedures and discussed the variable scopes.

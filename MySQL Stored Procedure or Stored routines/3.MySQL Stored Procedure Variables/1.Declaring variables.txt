@@ -1,0 +1,24 @@
+To declare a variable inside a stored procedure, you use the DECLARE  statement as follows:
+
+
+DECLARE variable_name datatype(size) DEFAULT default_value;
+1
+DECLARE variable_name datatype(size) DEFAULT default_value;
+Let’s examine the statement above in more detail:
+
+First, you specify the variable name after the DECLARE keyword. The variable name must follow the naming rules of MySQL table column names.
+Second, you specify the data type of the variable and its size. A variable can have any MySQL data types such as INT, VARCHAR , and DATETIME.
+Third, when you declare a variable, its initial value is NULL. You can assign the variable a default value using the DEFAULTkeyword.
+For example, we can declare a variable named   total_sale with the data type INT and default value 0  as follows:
+
+
+DECLARE total_sale INT DEFAULT 0;
+1
+DECLARE total_sale INT DEFAULT 0;
+MySQL allows you to declare two or more variables that share the same data type using a single DECLARE statement as following:
+
+
+DECLARE x, y INT DEFAULT 0;
+1
+DECLARE x, y INT DEFAULT 0;
+We declared two integer variables  x and  y, and set their default values to zero.
