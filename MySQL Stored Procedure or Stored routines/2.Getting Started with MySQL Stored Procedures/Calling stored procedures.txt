@@ -1,0 +1,12 @@
+In order to call a stored procedure, you use the following SQL command:
+
+
+CALL STORED_PROCEDURE_NAME();
+1
+CALL STORED_PROCEDURE_NAME();
+You use the CALL  statement to call a stored procedure e.g., to call the GetAllProducts()  stored procedure, you use the following statement:
+
+
+CALL GetAllProducts();
+1
+CALL GetAllProducts();
