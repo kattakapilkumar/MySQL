@@ -1,0 +1,7 @@
+MySQL provides both IF and CASE statements to enable you to execute a block of SQL code based on certain conditions, which is known as flow control. So what statement should you use? For the most developers, choosing between IF and CASE is just a matter of personal preference. However, when you decide to use IF or CASE ,  you should take the following points into the consideration:
+
+A simple CASE statement is more readable than the IF statement when you compare a single expression against a range of unique values. In addition, the simple CASE statement is more efficient than the IF statement.
+When you check complex expressions based on multiple values, the IF statement is easier to understand.
+If you choose to use the CASE statement, you have to make sure that at least one of the CASE condition is matched. Otherwise, you need to define an error handler to catch the error. Recall that you don’t have to do this with the IF statement.
+In most organization, there is always something called development guidelines document that provides developers with naming convention and guidelines on programming style. You should refer to this document and follow the development practices.
+In some situations, mixing between IF and CASE make your stored procedure more readable and efficient.
