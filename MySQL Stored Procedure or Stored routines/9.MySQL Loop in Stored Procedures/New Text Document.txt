@@ -1,0 +1,91 @@
+REPEAT loop
+
+The syntax of the REPEAT loop statement is as follows:
+
+
+REPEAT
+ statements;
+UNTIL expression
+END REPEAT
+1
+2
+3
+4
+REPEAT
+ statements;
+UNTIL expression
+END REPEAT
+First, MySQL executes the statements, and then it evaluates the expression. If the expression evaluates to FALSE, MySQL executes the statements repeatedly until the expression evaluates to TRUE.
+
+Because the REPEAT loop statement checks the expression after the execution of statements therefore the REPEAT loop statement is also known as the post-test loop.
+
+The following flowchart illustrates the REPEAT loop statement:
+
+mysql repeat loop
+
+We can rewrite the test_mysql_while_loop stored procedure that uses WHILE loop statement above using the REPEAT loop statement:
+
+
+ DELIMITER $$
+ DROP PROCEDURE IF EXISTS mysql_test_repeat_loop$$
+ CREATE PROCEDURE mysql_test_repeat_loop()
+	BEGIN
+		DECLARE x INT;
+		DECLARE str VARCHAR(255);
+        
+		SET x = 1;
+        SET str =  '';
+        
+		REPEAT
+			SET  str = CONCAT(str,x,',');
+			SET  x = x + 1; 
+        UNTIL x  > 5
+        END REPEAT;
+
+        SELECT str;
+	END$$
+ DELIMITER ;
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+ DELIMITER $$
+ DROP PROCEDURE IF EXISTS mysql_test_repeat_loop$$
+ CREATE PROCEDURE mysql_test_repeat_loop()
+ BEGIN
+ DECLARE x INT;
+ DECLARE str VARCHAR(255);
+        
+ SET x = 1;
+        SET str =  '';
+        
+ REPEAT
+ SET  str = CONCAT(str,x,',');
+ SET  x = x + 1; 
+        UNTIL x  > 5
+        END REPEAT;
+ 
+        SELECT str;
+ END$$
+ DELIMITER ;
+It is noted that there is no semicolon (;) in the UNTIL expression.
+
+
+CALL mysql_test_repeat_loop();
+1
+CALL mysql_test_repeat_loop();

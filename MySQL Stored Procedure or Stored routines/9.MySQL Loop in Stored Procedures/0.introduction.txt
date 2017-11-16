@@ -1,0 +1,5 @@
+Summary: in this tutorial, you will learn how to use various MySQL loop statements including WHILE, REPEAT and LOOPto run a block of code repeatedly based on a condition.
+
+MySQL provides loop statements that allow you to execute a block of SQL code repeatedly based on a condition. There are three loop statements in MySQL: WHILE, REPEAT and LOOP.
+
+We will examine each loop statement in more detail in the following sections.

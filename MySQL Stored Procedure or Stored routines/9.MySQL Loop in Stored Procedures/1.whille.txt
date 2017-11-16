@@ -1,0 +1,15 @@
+WHILE loop
+
+The syntax of the WHILE statement is as follows:
+
+
+WHILE expression DO
+   statements
+END WHILE
+1
+2
+3
+WHILE expression DO
+   statements
+END WHILE
+The WHILE loop checks the expressionat the beginning of each iteration. If the expressionevaluates to TRUE, MySQL will execute statementsbetween WHILEand END WHILE until the expressionevaluates to FALSE. The WHILE loop is called pretest loop because it checks the expression before the statements execute.
