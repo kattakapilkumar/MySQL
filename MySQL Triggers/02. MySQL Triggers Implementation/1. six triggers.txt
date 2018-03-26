@@ -1,0 +1,6 @@
+BEFORE INSERT – activated before data is inserted into the table.
+AFTER INSERT – activated after data is inserted into the table.
+BEFORE UPDATE – activated before data in the table is updated.
+AFTER UPDATE – activated after data in the table is updated.
+BEFORE DELETE – activated before data is removed from the table.
+AFTER DELETE – activated after data is removed from the table.

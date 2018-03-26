@@ -1,0 +1,13 @@
+When you use a statement that does not use INSERT, DELETE or UPDATE statement 
+to change data in a table, the triggers associated with the table are 
+not invoked. For example, the TRUNCATE statement removes all data of a table but 
+does not invoke the trigger associated with that table.
+
+
+
+
+
+
+There are some statements that use the INSERT statement behind the scenes
+ such as REPLACE statement or LOAD DATA statement. If you use these statements, 
+the corresponding triggers associated with the table are invoked.

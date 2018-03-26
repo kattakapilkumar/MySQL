@@ -1,0 +1,8 @@
+MySQL triggers cover all features defined in the standard SQL. However, there are some limitations that you should know before using them in your applications.
+
+MySQL triggers cannot:
+
+Use SHOW, LOAD DATA, LOAD TABLE, BACKUP DATABASE, RESTORE, FLUSH and RETURN statements.
+Use statements that commit or rollback implicitly or explicitly such as COMMIT , ROLLBACK , START TRANSACTION , LOCK/UNLOCK TABLES , ALTER , CREATE , DROP ,  RENAME.
+Use prepared statements such as PREPAREand EXECUTE.
+Use dynamic SQL statements.

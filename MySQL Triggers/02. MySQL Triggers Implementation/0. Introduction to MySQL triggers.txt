@@ -1,0 +1,3 @@
+In MySQL, a trigger is a set of SQL statements that is invoked automatically when a change is made to 
+the data on the associated table. A trigger can be defined to be invoked either before or after the data is
+changed by INSERT, UPDATE or DELETE statement. Before MySQL version 5.7.2, you can to define 

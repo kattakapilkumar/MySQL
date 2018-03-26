@@ -7,6 +7,6 @@ The 5 main important points to know what are triggers
 
 3) A SQL trigger is a special type of stored procedure. 
 
-4) It is special because it is not called directly like a stored procedure.
+4) It is special because it is not called directly like a stored procedure.gi
 
 5) The main difference between a trigger and a stored procedure is that a trigger is called automatically when a data modification event is made against a table whereas a stored procedure must be called explicitly.
