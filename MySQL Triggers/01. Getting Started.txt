@@ -1,0 +1,12 @@
+The 5 main important points to know what are triggers 
+
+
+1) A SQL trigger is a set of  SQL statements stored in the database catalog.
+
+2) A SQL trigger is executed or fired whenever an event associated with a table occurs e.g.,  insert, update or delete.
+
+3) A SQL trigger is a special type of stored procedure. 
+
+4) It is special because it is not called directly like a stored procedure.
+
+5) The main difference between a trigger and a stored procedure is that a trigger is called automatically when a data modification event is made against a table whereas a stored procedure must be called explicitly.
